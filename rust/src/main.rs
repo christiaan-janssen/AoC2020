@@ -1,5 +1,12 @@
-mod puzzels;
+mod puzzles;
+mod utils;
+
+use crate::puzzles::one_a::*;
+use crate::puzzles::one_b::*;
+
+
 
 fn main() {
-    println!("Hello, world!");
+    println!("1a: {}",one_a("../1.input"));
+    println!("1b: {}",one_b("../1.input"));
 }

@@ -1,8 +1,7 @@
 use crate::utils::map::*;
 use crate::utils::file::lines_from_file;
 
-
-pub fn check_map(map_vec: &Vec<String>) -> i64 {
+pub fn check_map(map_vec: &[String]) -> i64 {
     let map_width = map_vec[0].len();
     let map_height = map_vec.len();
     let mut map_str: String = String::new();

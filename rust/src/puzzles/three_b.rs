@@ -1,7 +1,7 @@
 use crate::utils::map::*;
 
 
-pub fn check_map_with_slope(map_vec: &Vec<String>, right: i32, down: i32) -> i64 {
+pub fn check_map_with_slope(map_vec: &[String], right: i32, down: i32) -> i64 {
     let map_width = map_vec[0].len();
     let map_height = map_vec.len();
     let mut map_str: String = String::new();
@@ -10,11 +10,10 @@ pub fn check_map_with_slope(map_vec: &Vec<String>, right: i32, down: i32) -> i64
     }
 
     let map: Map = Map::new(map_width as i32, map_str);
-    let mut x = right;
-
+    let mut x = 0;
     let mut trees = 0;
 
-    for y in (1 .. map_height).step_by(down as usize)  {
+    for y in (0 .. map_height).step_by(down as usize)  {
         let idx = map.map_idx(x % map_width as i32,y as i32);
         if idx <= map.tiles.len()  {
             if map.tiles[idx] == TileType::Wall {

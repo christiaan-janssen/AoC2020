@@ -2,11 +2,10 @@ use crate::utils::file::*;
 
 pub fn one_a(path: &str) -> i32 {
     let data = read_lines_to_i32(path);
-    let out = match data {
+    match data {
         Ok(v) => { fix_expense_a(v)},
         Err(e) => {println!("Error reading file: {}", e);0},
-    };
-    out
+    }
 }
 
 pub fn fix_expense_a(report: Vec<i32>) -> i32 {

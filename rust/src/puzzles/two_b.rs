@@ -12,7 +12,6 @@ pub fn two_b(path: &str) -> Result<i32, std::io::Error>{
             valid += 1;
         }
     }
-    println!("{:?}", valid);
     Ok(valid)
 }
 

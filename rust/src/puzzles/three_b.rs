@@ -30,6 +30,7 @@ pub fn check_map_with_slope(map_vec: &Vec<String>, right: i32, down: i32) -> i64
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::utils::file::lines_from_file;
 
     #[test]
     fn test_the_path_1_by_1() {

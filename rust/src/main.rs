@@ -1,5 +1,4 @@
 #![allow(dead_code)]
-use std::time::Instant;
 
 mod puzzles;
 mod utils;
@@ -14,8 +13,6 @@ use crate::puzzles::three_a::check_map;
 use crate::puzzles::three_b::check_map_with_slope;
 
 fn main() {
-    let start = Instant::now();
-
     println!("1a: {}",one_a("../1.input"));
     println!("1b: {}",one_b("../1.input"));
     match two_a("../2.input") {
@@ -39,7 +36,5 @@ fn main() {
         check_map_with_slope(&map_vec, 7, 1) *
         check_map_with_slope(&map_vec, 1, 2);
 
-    println!("{}", awnser);
-    println!("Finished after {:?}", start.elapsed());
-
+    println!("3b: {}", awnser);
 }

@@ -1,4 +1,5 @@
 use crate::utils::map::*;
+use crate::utils::file::lines_from_file;
 
 
 pub fn check_map(map_vec: &Vec<String>) -> i64 {
